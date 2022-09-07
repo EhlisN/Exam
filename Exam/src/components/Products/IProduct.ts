@@ -1,7 +1,12 @@
 export interface IProduct {
   id: number;
-  email: string;
-  first_name: string;
-  last_name: string;
-  avatar: string;
+  title: string;
+  brand: string;
+  thumbnail: string;
+  price: number;
+  category?: string;
+  description?: string;
+  discountPercentage?: number;
+  rating?: number;
+  stock?: number;
 }

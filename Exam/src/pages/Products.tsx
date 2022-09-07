@@ -3,12 +3,12 @@ import { IProduct } from '../components/Products/IProduct';
 import './Products.css';
 import { initialUser } from '../components/Products/initialProduct';
 import http from '../components/http';
-import UserCards from '../components/Products/ProductCards';
+import ProductCards from '../components/Products/ProductCards';
 import Search from '../components/Search';
 import { useSearch } from '../hooks/useSearch';
 import Context from '../context/context';
 
-const Users: FC = () => {
+const Products: FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [search, setSearch] = useState('');
   const [openModal, setOpenModal] = useState(false);
@@ -17,8 +17,9 @@ const Users: FC = () => {
 
   const getProduct = async () => {
     try {
-      const products = await http.get('users');
-      setProducts(products.data);
+      const products = await http.get('');
+      setProducts(products.data.products);
+      console.log(products.data);
     } catch (e) {
       console.log(e);
     }
@@ -27,24 +28,24 @@ const Users: FC = () => {
     getProduct();
   }, []);
 
-  const searchedProduct = useSearch(
-    products,
-    'first_name',
-    'last_name',
-    search
-  );
+  // const searchedProduct = useSearch(
+  //   products,
+  //   'first_name',
+  //   'last_name',
+  //   search
+  // );
 
   return (
     <>
-      <Search
+      {/* <Search
         btnName={'Add new User'}
         field={'Enter Username'}
         setOpenModal={setOpenModal}
         setSearch={setSearch}
-      ></Search>
-      <UserCards products={searchedProduct}></UserCards>
+      ></Search> */}
+      <ProductCards products={products}></ProductCards>
     </>
   );
 };
 
-export default Users;
+export default Products;
