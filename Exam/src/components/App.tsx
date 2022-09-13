@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './NavBar';
 import AppRoutes from './AppRoutes';
 import Context from '../context/context';
-import ModalLogin from './Modal';
+import Modal from './Modal';
 
 function App() {
   const [openModalLogin, setOpenModalLogin] = useState(false);
@@ -19,14 +19,12 @@ function App() {
     <Context.Provider
       value={{ openModalLogin, setOpenModalLogin, isLoginUser, setIsLoginUser }}
     >
-      <div className="App">
-        <ModalLogin />
-        <header className="App-header">
-          <NavBar></NavBar>
-        </header>
-        <div className="container">
+      <div className='App'>
+        <NavBar />
+        <div className='container'>
           <AppRoutes></AppRoutes>
         </div>
+        <Modal />
       </div>
     </Context.Provider>
   );

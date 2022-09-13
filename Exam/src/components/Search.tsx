@@ -1,27 +1,21 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch } from 'react';
 
 const Search = ({
-  field,
-  btnName,
-  setOpenModal,
+  name,
   setSearch,
 }: {
-  field: string;
-  btnName: string;
-  setOpenModal: Dispatch<SetStateAction<boolean>>;
-  setSearch: Dispatch<SetStateAction<string>>;
+  name: string;
+  setSearch: Dispatch<React.SetStateAction<string>>;
 }) => {
   return (
-    <div className="input-group mb-3 mt-3">
-      <span className="input-group-text" id="basic-addon1">
+    <div className='input-group mb-3 mt-4 myShadow'>
+      <span className='input-group-text' id='basic-addon1'>
         Search
       </span>
       <input
-        type="text"
-        className="form-control"
-        placeholder={field}
-        aria-label="Username"
-        aria-describedby="basic-addon1"
+        type='text'
+        className='form-control'
+        placeholder={name}
         onChange={(event) => setSearch(event.target.value)}
       />
     </div>

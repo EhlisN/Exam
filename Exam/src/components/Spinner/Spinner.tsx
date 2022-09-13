@@ -2,8 +2,8 @@ import React from 'react';
 
 const Spinner = () => {
   return (
-    <div className="spinner-border text-danger mx-auto my-5" role="status">
-      <span className="visually-hidden">Loading...</span>
+    <div className='text-center col-md-12 mt-5'>
+      <div className='spinner-border text-dark' role='status'></div>
     </div>
   );
 };

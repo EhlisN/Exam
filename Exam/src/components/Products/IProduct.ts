@@ -4,9 +4,10 @@ export interface IProduct {
   brand: string;
   thumbnail: string;
   price: number;
-  category?: string;
-  description?: string;
-  discountPercentage?: number;
-  rating?: number;
-  stock?: number;
+  category: string;
+  description: string;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  images: string[];
 }
