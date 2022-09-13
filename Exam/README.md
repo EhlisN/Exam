@@ -1,6 +1,6 @@
 # User List Application
 
-## Available Scripts - https://ehlisn.github.io/Exam/
+## Available Scripts - https://ehlisn.github.io/Products-React/
 
 In the project directory, you can run:
 
