@@ -1,6 +1,6 @@
 # User List Application
 
-## Available Scripts
+## Available Scripts - https://ehlisn.github.io/Exam/
 
 In the project directory, you can run:
 
